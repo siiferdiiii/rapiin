@@ -56,30 +56,51 @@ document.addEventListener('DOMContentLoaded', () => {
         opacity: 0.15
     });
 
-    // MOUSE INTERACTION
+    // MOUSE INTERACTION & IDLE CHECK
     let mouseX = 0;
     let mouseY = 0;
+    let lastMouseMoveTime = Date.now();
+    let isIdle = false;
 
     // Mild parallax based on mouse
     document.addEventListener('mousemove', (event) => {
         mouseX = event.clientX - window.innerWidth / 2;
         mouseY = event.clientY - window.innerHeight / 2;
+        lastMouseMoveTime = Date.now();
+        isIdle = false;
     });
 
     // ANIMATION LOOP
     const animate = () => {
         requestAnimationFrame(animate);
 
-        // Rotate the whole system slowly
-        particlesMesh.rotation.y += 0.001;
-        particlesMesh.rotation.x += 0.0005;
+        const time = Date.now();
 
-        // Mouse Parallax
-        const targetX = mouseX * 0.001;
-        const targetY = mouseY * 0.001;
+        // Check if idle (no mouse move for 2 seconds)
+        if (time - lastMouseMoveTime > 2000) {
+            isIdle = true;
+        }
 
+        // Target Rotation Calculation
+        let targetX, targetY;
+
+        if (isIdle) {
+            // Random Wandering (Simulated by Sine Waves)
+            // Creates a smooth, unpredictable floating motion
+            targetX = Math.sin(time * 0.0005) * 0.2; // 0.0005 = slow speed, 0.2 = amplitude
+            targetY = Math.cos(time * 0.0003) * 0.2;
+        } else {
+            // Mouse Follow
+            targetX = mouseX * 0.001;
+            targetY = mouseY * 0.001;
+        }
+
+        // Smoothly interpolate current rotation to target
         particlesMesh.rotation.y += 0.05 * (targetX - particlesMesh.rotation.y);
         particlesMesh.rotation.x += 0.05 * (targetY - particlesMesh.rotation.x);
+
+        // Constant slow spin
+        particlesMesh.rotation.y += 0.001;
 
         // NOTE: Dynamic line creation can be expensive. 
         // For performance on all devices, we will just rotate the dots for now.
