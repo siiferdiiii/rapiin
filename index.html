@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Otomatisasi WhatsApp & Bisnis - Hemat Waktu, Fokus Jualan</title>
+    <meta name="description"
+        content="Jasa otomasi WhatsApp dan bisnis untuk UMKM. Kurangi kerja manual, rekap order otomatis, laporan harian rapi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- PHOSPHOR ICONS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- THREE.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- CHART.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Base inline safeguard if CSS fails */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 3D BACKGROUND CONTAINER -->
+    <div id="canvas-container"></div>
+
+    <!-- NAVBAR (Always Hamburger) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Jasa<span class="text-primary">Otomasi</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#masalah" class="nav-link">Masalah</a></li>
+                <li><a href="#solusi" class="nav-link">Solusi</a></li>
+                <li><a href="#dampak" class="nav-link">Dampak</a></li>
+                <li><a href="#kalkulator" class="nav-link">Hitung Hemat</a></li>
+                <li><a href="#project" class="nav-link">Project</a></li>
+                <li><a href="#audit-form" class="cta-button small-btn">Konsultasi Gratis</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section animate-on-scroll" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Masih Capek Jadi Admin Chat Seumur Hidup?</h1>
+                <p class="subheadline">Otomatisasi WhatsApp, Rekap Order, & Laporan Harian. Biar sistem yang kerja 24
+                    jam, Anda fokus perbesar bisnis.</p>
+                <a href="#audit-form" class="cta-button primary">Ya, Saya Mau Sistem Ini</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- PROBLEM SECTION -->
+    <section class="problem-section animate-on-scroll" id="masalah">
+        <div class="container">
+            <h2 class="section-title">Sering Mengalami Ini?</h2>
+            <div class="grid-4">
+                <div class="card problem-card">
+                    <div class="icon"><i class="ph ph-chats-teardrop"></i></div>
+                    <h3>Chat Numpuk</h3>
+                    <p>WhatsApp sering slow response karena chat menumpuk dan telat dibalas.</p>
+                </div>
+                <div class="card problem-card">
+                    <div class="icon"><i class="ph ph-notebook"></i></div>
+                    <h3>Order Manual</h3>
+                    <p>Order masih dicatat manual di buku atau Excel, sering ada yang terlewat atau lupa.</p>
+                </div>
+                <div class="card problem-card">
+                    <div class="icon"><i class="ph ph-battery-warning"></i></div>
+                    <h3>Lelah Rekap</h3>
+                    <p>Malam hari capek tapi masih harus begadang buat rekap orderan seharian.</p>
+                </div>
+                <div class="card problem-card">
+                    <div class="icon"><i class="ph ph-chart-line-down"></i></div>
+                    <h3>Buta Data</h3>
+                    <p>Tidak tahu ringkasan penjualan harian secara real-time, semua serba kira-kira.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="solution-section animate-on-scroll" id="solusi">
+        <div class="container">
+            <h2 class="section-title">Solusi Tanpa Ribet</h2>
+            <div class="solution-wrapper">
+                <div class="solution-content">
+                    <ul class="solution-list">
+                        <li>
+                            <span class="check"><i class="ph-fill ph-check-circle"></i></span>
+                            <div>
+                                <strong>Auto-reply WhatsApp</strong>
+                                <p>Balas pertanyaan umum secara instan, 24 jam nonstop.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check"><i class="ph-fill ph-check-circle"></i></span>
+                            <div>
+                                <strong>Order Otomatis Tersimpan</strong>
+                                <p>Data pesanan langsung masuk ke Google Sheets/Database rapi.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check"><i class="ph-fill ph-check-circle"></i></span>
+                            <div>
+                                <strong>Follow-up Otomatis</strong>
+                                <p>Ingatkan customer yang belum bayar tanpa perlu chat satu-satu.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="check"><i class="ph-fill ph-check-circle"></i></span>
+                            <div>
+                                <strong>Laporan Harian via Email</strong>
+                                <p>Terima ringkasan omzet dan performa bisnis setiap pagi/malam.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT SECTION (NEW) -->
+    <section class="impact-section animate-on-scroll" id="dampak">
+        <div class="container">
+            <h2 class="section-title">Dampak Nyata Automasi</h2>
+            <div class="impact-content">
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="ph-fill ph-trend-up"></i></div>
+                    <div>
+                        <h4>Pertumbuhan Bisnis Cepat</h4>
+                        <p>Fokus strategi, bukan terjebak rutinitas admin.</p>
+                    </div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="ph-fill ph-coins"></i></div>
+                    <div>
+                        <h4>Hemat Biaya Operasional</h4>
+                        <p>Kurangi biaya lembur atau rekrut admin tambahan.</p>
+                    </div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="ph-fill ph-check-fat"></i></div>
+                    <div>
+                        <h4>Minim Human Error</h4>
+                        <p>Data pesanan & stok akurat, nol kesalahan ketik.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR SECTION -->
+    <!-- CALCULATOR SECTION (REBUILT) -->
+    <section class="calculator-section animate-on-scroll" id="kalkulator">
+        <div class="container">
+            <div class="calc-header">
+                <h2 class="section-title">Stop Membakar Uang & Waktu!</h2>
+                <p class="section-subtitle">Setiap menit yang habis untuk rekap manual adalah <strong>profit yang
+                        hilang</strong>. Hitung berapa banyak yang bisa Anda selamatkan dengan Automasi.</p>
+            </div>
+
+            <div class="calculator-wrapper">
+                <!-- INPUT CARD -->
+                <div class="calc-card input-card">
+                    <h3><i class="ph-fill ph-calculator"></i> Simulasi Biaya Manual</h3>
+
+                    <div class="input-group-calc">
+                        <label>Total Jam Kerja Admin / Bulan</label>
+                        <div class="input-with-icon">
+                            <i class="ph ph-clock"></i>
+                            <input type="number" id="manualHours" placeholder="Contoh: 50" value="50">
+                        </div>
+                        <small class="hint">Berapa jam dihabiskan untuk chat & rekap?</small>
+                    </div>
+
+                    <div class="input-group-calc">
+                        <label>Biaya / Gaji per Jam (Rp)</label>
+                        <div class="input-with-icon">
+                            <i class="ph ph-money"></i>
+                            <input type="number" id="hourlyRate" placeholder="Contoh: 25000" value="25000">
+                        </div>
+                    </div>
+
+                    <button class="cta-button primary full-width" id="calculateBtn">
+                        <i class="ph-bold ph-lightning"></i> Hitung Potensi Profit Saya
+                    </button>
+
+                    <!-- REMOVED MINI RESULTS FROM HERE -->
+                </div>
+
+                <!-- CHART CARD -->
+                <div class="calc-card chart-card">
+                    <div class="chart-header">
+                        <h3>Proyeksi Keuntungan 5 Tahun</h3>
+                        <p class="chart-sub">Jika Anda beralih ke sistem otomatis sekarang.</p>
+
+                        <!-- MOVED RESULTS HERE -->
+                        <div class="result-mini-grid" id="miniResults"
+                            style="display:none; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+                            <div class="mini-card green">
+                                <span>Hemat Uang/Bln</span>
+                                <strong id="resMoney">Rp 0</strong>
+                            </div>
+                            <div class="mini-card blue">
+                                <span>Hemat Waktu/Bln</span>
+                                <strong id="resTime">0 Jam</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="savingsChart"></canvas>
+                    </div>
+                    <div class="chart-legend-custom">
+                        <div class="legend-item"><span class="dot money-dot"></span> Uang Dihemat (Rp)</div>
+                        <div class="legend-item"><span class="dot time-dot"></span> Waktu Dihemat (Jam)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / PROJECT SECTION -->
+    <section class="project-section animate-on-scroll" id="project">
+        <div class="container">
+            <h2 class="section-title">Project yang Pernah Dikerjakan</h2>
+            <div class="grid-3">
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Toko Herbal "SehatAlami"</h3>
+                    </div>
+                    <div class="project-body">
+                        <p><strong>Masalah:</strong> CS kewalahan balas chat tanya harga & stok.</p>
+                        <p><strong>Solusi:</strong> Bot cek ongkir & stok otomatis via WA.</p>
+                        <hr>
+                        <p class="result"><strong>Hasil:</strong> Hemat 3 jam/hari kerja CS, respon chat di bawah 1
+                            menit.</p>
+                    </div>
+                </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Distributor Kopi "BaristaHub"</h3>
+                    </div>
+                    <div class="project-body">
+                        <p><strong>Masalah:</strong> Rekap order dari 50+ reseller via chat sering selisih.</p>
+                        <p><strong>Solusi:</strong> Form order via WA -> Auto rekap ke Google Sheets.</p>
+                        <hr>
+                        <p class="result"><strong>Hasil:</strong> Data 100% akurat, admin tidak perlu input ulang.</p>
+                    </div>
+                </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <h3>Laundry "BersihKilat"</h3>
+                    </div>
+                    <div class="project-body">
+                        <p><strong>Masalah:</strong> Lupa info ke customer kalau cucian sudah selesai.</p>
+                        <p><strong>Solusi:</strong> Notifikasi otomatis saat status diubah di sistem kasir.</p>
+                        <hr>
+                        <p class="result"><strong>Hasil:</strong> Pengambilan cucian 2x lebih cepat, komplain hilang.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT SECTION -->
+    <section class="client-section animate-on-scroll" id="klien">
+        <div class="container">
+            <h2 class="section-title">Klien yang Pernah Menggunakan</h2>
+            <div class="grid-2">
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <strong>Arif, Owner KopiSenja</strong>
+                    </div>
+                    <p>"Awalnya ragu karena takut ribet, ternyata simpel banget. Sekarang saya bisa pantau omzet cuma
+                        dari notif WA yang masuk tiap malam."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <strong>Siska, Agen Frozen Food</strong>
+                    </div>
+                    <p>"Sangat terbantu. Admin saya jadi lebih fokus jualan daripada cuma balesin chat 'masih ada gak
+                        kak?' berulang-ulang."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="process-section animate-on-scroll" id="cara-kerja">
+        <div class="container">
+            <h2 class="section-title">Cara Kerja</h2>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4>Isi Form Briefing</h4>
+                    <p>Ceritakan masalah Anda di form bawah ini.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h4>Analisa & Review</h4>
+                    <p>Saya pelajari workflow Anda dan siapkan solusi.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h4>Pembuatan & Demo</h4>
+                    <p>Sistem dibuat dan didemokan ke Anda.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h4>Revisi & Jalan</h4>
+                    <p>Revisi kecil jika perlu, lalu sistem siap running.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="form-section animate-on-scroll" id="audit-form">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2 class="section-title">Form Branding & Briefing</h2>
+                <p class="form-note">Data ini digunakan untuk menghitung potensi penghematan waktu & biaya bisnis Anda.
+                </p>
+
+                <form id="leadForm">
+
+                    <!-- SECTION 1 -->
+                    <div class="form-section-block">
+                        <div class="section-header">
+                            <i class="ph ph-identification-card"></i>
+                            <h3>Data Dasar</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap <span class="required">*</span></label>
+                            <input type="text" id="nama" name="nama" required placeholder="Budi Santoso">
+                        </div>
+                        <div class="form-group">
+                            <label for="bisnis">Nama Bisnis <span class="required">*</span></label>
+                            <input type="text" id="bisnis" name="bisnis" required placeholder="Toko Baju Barokah">
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">Nomor WhatsApp Aktif <span class="required">*</span></label>
+                            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="0812xxxxxxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="jenis_bisnis">Jenis Bisnis <span class="required">*</span></label>
+                            <select id="jenis_bisnis" name="jenis_bisnis" required>
+                                <option value="" disabled selected>Pilih Jenis Bisnis</option>
+                                <option value="Online Shop">Online Shop</option>
+                                <option value="Jasa">Jasa</option>
+                                <option value="Kuliner">Kuliner</option>
+                                <option value="Klinik / Kesehatan">Klinik / Kesehatan</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="jam_ops">Jam Operasional Bisnis <span class="required">*</span></label>
+                            <input type="text" id="jam_ops" name="jam_ops" required placeholder="08.00 – 17.00 WIB">
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2 -->
+                    <div class="form-section-block">
+                        <div class="section-header">
+                            <i class="ph ph-chat-circle-dots"></i>
+                            <h3>Aktivitas Chat</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="chat_volume">Rata-rata jumlah chat masuk per hari <span
+                                    class="required">*</span></label>
+                            <select id="chat_volume" name="chat_volume" required>
+                                <option value="" disabled selected>Pilih Volume Chat</option>
+                                <option value="< 10 chat">&lt; 10 chat</option>
+                                <option value="10 - 30 chat">10 – 30 chat</option>
+                                <option value="30 - 70 chat">30 – 70 chat</option>
+                                <option value="> 70 chat">&gt; 70 chat</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Perkiraan waktu yang dihabiskan untuk:</label>
+
+                            <div class="sub-group">
+                                <label for="waktu_balas" class="sub-label">a. Balas chat WhatsApp per hari <span
+                                        class="required">*</span></label>
+                                <select id="waktu_balas" name="waktu_balas" required>
+                                    <option value="" disabled selected>Pilih Durasi</option>
+                                    <option value="< 1 jam">&lt; 1 jam</option>
+                                    <option value="1 - 2 jam">1 – 2 jam</option>
+                                    <option value="2 - 4 jam">2 – 4 jam</option>
+                                    <option value="> 4 jam">&gt; 4 jam</option>
+                                </select>
+                            </div>
+
+                            <div class="sub-group">
+                                <label for="waktu_rekap" class="sub-label">b. Rekap order / catatan manual per hari
+                                    <span class="required">*</span></label>
+                                <select id="waktu_rekap" name="waktu_rekap" required>
+                                    <option value="" disabled selected>Pilih Durasi</option>
+                                    <option value="Tidak ada">Tidak ada</option>
+                                    <option value="< 1 jam">&lt; 1 jam</option>
+                                    <option value="1 - 2 jam">1 – 2 jam</option>
+                                    <option value="> 2 jam">&gt; 2 jam</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 3 -->
+                    <div class="form-section-block">
+                        <div class="section-header">
+                            <i class="ph ph-list-checks"></i>
+                            <h3>Jenis Chat & Kebutuhan</h3>
+                        </div>
+                        <div class="form-group">
+                            <label>Jenis chat yang paling sering masuk <span class="required">*</span></label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item"><input type="checkbox" name="jenis_chat"
+                                        value="Tanya harga"> Tanya harga</label>
+                                <label class="checkbox-item"><input type="checkbox" name="jenis_chat"
+                                        value="Tanya stok"> Tanya stok</label>
+                                <label class="checkbox-item"><input type="checkbox" name="jenis_chat" value="Order">
+                                    Order</label>
+                                <label class="checkbox-item"><input type="checkbox" name="jenis_chat" value="Follow-up">
+                                    Follow-up</label>
+                                <label class="checkbox-item"><input type="checkbox" name="jenis_chat" value="Komplain">
+                                    Komplain</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Auto-reply diinginkan aktif:</label>
+                            <div class="radio-group">
+                                <label class="radio-item"><input type="radio" name="auto_reply_time" value="24 jam"
+                                        checked> 24 jam</label>
+                                <label class="radio-item"><input type="radio" name="auto_reply_time"
+                                        value="Jam operasional saja"> Jam operasional saja</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 4 -->
+                    <div class="form-section-block">
+                        <div class="section-header">
+                            <i class="ph ph-chart-bar"></i>
+                            <h3>Laporan & Follow-up</h3>
+                        </div>
+                        <div class="form-group">
+                            <label>Apakah ingin laporan harian via email? <span class="required">*</span></label>
+                            <div class="radio-group" id="laporan_toggle">
+                                <label class="radio-item"><input type="radio" name="want_report" value="Ya" checked>
+                                    Ya</label>
+                                <label class="radio-item"><input type="radio" name="want_report" value="Tidak">
+                                    Tidak</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="email_group">
+                            <label for="email_report">Jika Ya, email tujuan laporan:</label>
+                            <input type="email" id="email_report" name="email_report" placeholder="owner@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Ingin follow-up otomatis ke customer?</label>
+                            <div class="radio-group">
+                                <label class="radio-item"><input type="radio" name="want_followup" value="Ya" checked>
+                                    Ya</label>
+                                <label class="radio-item"><input type="radio" name="want_followup" value="Tidak">
+                                    Tidak</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 5 -->
+                    <div class="form-section-block">
+                        <div class="section-header">
+                            <i class="ph ph-check-square"></i>
+                            <h3>Konfirmasi</h3>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Catatan tambahan (optional)</label>
+                            <textarea id="notes" name="notes"
+                                placeholder="Hal khusus yang perlu diperhatikan..."></textarea>
+                        </div>
+
+                        <div class="form-check box-check">
+                            <input type="checkbox" id="persetujuan" name="persetujuan" required>
+                            <label for="persetujuan">Saya setuju data ini digunakan sebagai dasar pembuatan sistem.
+                                Perubahan besar di luar form termasuk revisi tambahan.</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="cta-button full-width" id="submitBtn">Kirim & Lanjutkan</button>
+                    <p class="status-msg" id="statusMsg"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Hubungi via WhatsApp: <a
+                    href="https://wa.me/6285135735734?text=Halo%20kk%2C%20saya%20mau%20tanya%20tanya%20tentang%20automasi%20untuk%20UMKM"
+                    target="_blank" class="footer-link">0851-3573-5734</a></p>
+            <p class="footer-note">Tidak ada biaya sebelum sistem ditunjukkan.</p>
+            <p class="copyright">&copy; 2024 Jasa Otomasi Bisnis.</p>
+        </div>
+    </footer>
+
+    <!-- FLOAT WA BUTTON -->
+    <a href="https://wa.me/6285135735734?text=Halo%20kk%2C%20saya%20mau%20tanya%20tanya%20tentang%20automasi%20untuk%20UMKM"
+        class="float-wa" target="_blank">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+</body>
+
+</html>
