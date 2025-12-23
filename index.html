@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- PHOSPHOR ICONS -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!-- THREE.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- PARTICLES.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <!-- CHART.JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
@@ -28,8 +28,8 @@
 
 <body>
 
-    <!-- 3D BACKGROUND CONTAINER -->
-    <div id="canvas-container"></div>
+    <!-- PARTICLES BACKGROUND CONTAINER -->
+    <div id="particles-js"></div>
 
     <!-- NAVBAR (Always Hamburger) -->
     <nav class="navbar">
@@ -46,6 +46,7 @@
                 <li><a href="#dampak" class="nav-link">Dampak</a></li>
                 <li><a href="#kalkulator" class="nav-link">Hitung Hemat</a></li>
                 <li><a href="#project" class="nav-link">Project</a></li>
+                <li><a href="demo.html" class="nav-link">Demo</a></li>
                 <li><a href="#audit-form" class="cta-button small-btn">Konsultasi Gratis</a></li>
             </ul>
         </div>
@@ -55,12 +56,12 @@
     <header class="hero-section animate-on-scroll" id="home">
         <div class="container hero-container">
             <div class="hero-content">
-                <h1>Masih <em>Rela</em> Jadi <span class="text-primary">Admin Chat</span> Seumur Hidup?</h1>
-                <p class="subheadline">Stop <s>kerja rodi</s> balas chat manual & rekap order sampai begadang. Biarkan
-                    <strong>sistem cerdas</strong> yang bekerja 24 jam, sementara Anda fokus <u>perbesar bisnis</u> &
-                    nikmati hidup.</p>
-                <a href="#audit-form" class="cta-button primary">🚀 Ya, Saya Mau <strong>Sistem Otomatis</strong>
-                    Ini</a>
+                <h1>Bisnis Jalan, Anda <em>Jalan-Jalan</em>. <span class="text-primary">Otomatis!</span></h1>
+                <p class="subheadline">Jangan habiskan hidup Anda cuma buat balesin chat "Ada stok gan?".
+                    Biarkan <strong>Sistem Cerdas</strong> kami yang bekerja 24 jam non-stop.
+                    <br>Tidur nyenyak, omzet tetap nanjak.
+                </p>
+                <a href="#audit-form" class="cta-button primary">🚀 Saya Mau Bisnis Otomatis Sekarang</a>
             </div>
 
         </div>
@@ -69,7 +70,7 @@
     <!-- PROBLEM SECTION -->
     <section class="problem-section animate-on-scroll" id="masalah">
         <div class="container">
-            <h2 class="section-title">Sering Mengalami Ini?</h2>
+            <h2 class="section-title">Jangan Sampai Bisnis Anda "Mati" Karena Ini...</h2>
             <div class="grid-4">
                 <div class="card problem-card">
                     <div class="icon"><i class="ph ph-chats-teardrop"></i></div>
@@ -87,7 +88,8 @@
                     <div class="icon"><i class="ph ph-battery-warning"></i></div>
                     <h3>Lelah <strong>Rekap</strong></h3>
                     <p>Malam waktunya istirahat, tapi Anda <em>terpaksa</em> begadang cuma buat rekap omzet. Kapan
-                        <u>nikmati hasil</u>?</p>
+                        <u>nikmati hasil</u>?
+                    </p>
                 </div>
                 <div class="card problem-card">
                     <div class="icon"><i class="ph ph-chart-line-down"></i></div>
@@ -109,33 +111,30 @@
                         <li>
                             <span class="check"><i class="ph-fill ph-check-circle"></i></span>
                             <div>
-                                <strong>Auto-reply WhatsApp ⚡</strong>
-                                <p>Balas chat pelanggan dalam <u>detik</u>, 24 jam nonstop. Customer senang,
-                                    <em>closing</em> lebih cepat.</p>
+                                <strong>CS 24 Jam Non-Stop</strong>
+                                <p>Sistem merespon chat customer <u>detik itu juga</u>. Tidak ada lagi drama "Maaf baru
+                                    bales".</p>
                             </div>
                         </li>
                         <li>
                             <span class="check"><i class="ph-fill ph-check-circle"></i></span>
                             <div>
-                                <strong>Input Order <s>Manual</s> Otomatis</strong>
-                                <p>Format order masuk WA -> Langsung tersimpan rapi di Google Sheets/Database.
-                                    <strong>0% Typo.</strong></p>
+                                <strong>Orderan Ter-Rekap Otomatis</strong>
+                                <p>Customer isi form WA -> Data masuk database. Rapi, akurat, dan siap kirim.</p>
                             </div>
                         </li>
                         <li>
                             <span class="check"><i class="ph-fill ph-check-circle"></i></span>
                             <div>
-                                <strong>Follow-up Tanpa Baper</strong>
-                                <p>Ingatkan customer yang <em>ghosting</em> belum bayar secara otomatis. Tingkatkan
-                                    konversi tanpa rasa sungkan.</p>
+                                <strong>Follow-Up Anti Lupa</strong>
+                                <p>Customer cuma tanya-tanya? Sistem akan mengejar mereka otomatis sampai closing.</p>
                             </div>
                         </li>
                         <li>
                             <span class="check"><i class="ph-fill ph-check-circle"></i></span>
                             <div>
-                                <strong>Laporan Boss via Email 📩</strong>
-                                <p>Bangun tidur langsung terima email ringkasan omzet. Pantau bisnis sambil <u>ngopi
-                                        santai</u>.</p>
+                                <strong>Laporan Boss di Genggaman</strong>
+                                <p>Terima laporan omzet harian sambil ngopi pagi. Anda adalah Owner, bukan Admin.</p>
                             </div>
                         </li>
                     </ul>
@@ -147,7 +146,7 @@
     <!-- IMPACT SECTION (NEW) -->
     <section class="impact-section animate-on-scroll" id="dampak">
         <div class="container">
-            <h2 class="section-title">Dampak Nyata Automasi</h2>
+            <h2 class="section-title">Bayangkan Bisnis Anda Seperti Ini...</h2>
             <div class="impact-content">
                 <div class="impact-item">
                     <div class="impact-icon"><i class="ph-fill ph-trend-up"></i></div>
@@ -188,31 +187,55 @@
 
             <div class="calculator-wrapper">
                 <!-- INPUT CARD -->
+                <!-- INPUT CARD -->
                 <div class="calc-card input-card">
-                    <h3><i class="ph-fill ph-calculator"></i> Simulasi Biaya Manual</h3>
+                    <h3><i class="ph-fill ph-calculator"></i> Hitung "Harga" Penundaan Anda</h3>
 
-                    <div class="input-group-calc">
-                        <label>Total Jam Kerja Admin / Bulan</label>
-                        <div class="input-with-icon">
-                            <i class="ph ph-clock"></i>
-                            <input type="number" id="manualHours" placeholder="Contoh: 50" value="50">
+                    <!-- GROUP 1: OPERATIONAL COST -->
+                    <div class="calc-group-title">1. Biaya Operasional</div>
+
+                    <div class="input-row">
+                        <div class="input-group-calc half">
+                            <label>Gaji Admin / Bulan</label>
+                            <div class="input-with-icon">
+                                <i class="ph ph-money"></i>
+                                <input type="number" id="adminSalary" placeholder="Rp" value="3000000">
+                            </div>
                         </div>
-                        <small class="hint">Berapa jam dihabiskan untuk chat & rekap?</small>
+                        <div class="input-group-calc half">
+                            <label>Jml Admin</label>
+                            <div class="input-with-icon">
+                                <i class="ph ph-users"></i>
+                                <input type="number" id="adminCount" value="1">
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="input-group-calc">
-                        <label>Biaya / Gaji per Jam (Rp)</label>
-                        <div class="input-with-icon">
-                            <i class="ph ph-money"></i>
-                            <input type="number" id="hourlyRate" placeholder="Contoh: 25000" value="25000">
+                    <!-- GROUP 2: OPPORTUNITY COST -->
+                    <div class="calc-group-title">2. Potensi Keuntungan Hilang</div>
+                    <small class="hint-block">Chat yang tidak terbalas / slow respon = Uang hilang.</small>
+
+                    <div class="input-row">
+                        <div class="input-group-calc half">
+                            <label>Chat Hangus/Bln</label>
+                            <div class="input-with-icon">
+                                <i class="ph ph-chat-slash"></i>
+                                <input type="number" id="missedChats" placeholder="10" value="10">
+                            </div>
+                        </div>
+                        <div class="input-group-calc half">
+                            <label>Profit/Closing</label>
+                            <div class="input-with-icon">
+                                <i class="ph ph-trend-up"></i>
+                                <input type="number" id="profitPerChat" placeholder="Rp" value="50000">
+                            </div>
                         </div>
                     </div>
 
                     <button class="cta-button primary full-width" id="calculateBtn">
-                        <i class="ph-bold ph-lightning"></i> Hitung Potensi Profit Saya
+                        <i class="ph-bold ph-lightning"></i> Cek Berapa Uang Terbuang
                     </button>
-
-                    <!-- REMOVED MINI RESULTS FROM HERE -->
+                    <p class="calc-disclaimer">*Asumsi: Sistem menggantikan beban kerja admin & menyelamatkan leads.</p>
                 </div>
 
                 <!-- CHART CARD -->
@@ -225,12 +248,13 @@
                         <div class="result-mini-grid" id="miniResults"
                             style="display:none; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
                             <div class="mini-card green">
-                                <span>Hemat Uang/Bln</span>
-                                <strong id="resMoney">Rp 0</strong>
+                                <span>Total Value/Bln</span>
+                                <strong id="resMoney" style="font-size:1.4rem;">Rp 0</strong>
                             </div>
-                            <div class="mini-card blue">
-                                <span>Hemat Waktu/Bln</span>
-                                <strong id="resTime">0 Jam</strong>
+                            <!-- Card 2 content will be replaced by JS -->
+                            <div class="mini-card blue"
+                                style="display:flex; align-items:center; justify-content:center;">
+                                <strong id="resTime">...</strong>
                             </div>
                         </div>
                     </div>
@@ -346,9 +370,9 @@
     <section class="form-section animate-on-scroll" id="audit-form">
         <div class="container">
             <div class="form-wrapper">
-                <h2 class="section-title">Form Branding & Briefing</h2>
-                <p class="form-note">Data ini digunakan untuk menghitung potensi penghematan waktu & biaya bisnis Anda.
-                </p>
+
+                <h2 class="section-title">Revolusi Bisnis Anda Sekarang!</h2>
+                <p class="form-note">Dapatkan Audit & Hitungan Penghematan GRATIS. Isi form di bawah ini.</p>
 
                 <form id="leadForm">
 
@@ -381,9 +405,41 @@
                                 <option value="Lainnya">Lainnya</option>
                             </select>
                         </div>
+
                         <div class="form-group">
-                            <label for="jam_ops">Jam Operasional Bisnis <span class="required">*</span></label>
-                            <input type="text" id="jam_ops" name="jam_ops" required placeholder="08.00 – 17.00 WIB">
+                            <label>Platform Chat yang Digunakan <span class="required">*</span></label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item"><input type="checkbox" name="platform_chat"
+                                        value="WhatsApp" checked> WhatsApp</label>
+                                <label class="checkbox-item"><input type="checkbox" name="platform_chat"
+                                        value="Website"> Website</label>
+                                <label class="checkbox-item"><input type="checkbox" name="platform_chat"
+                                        value="Telegram"> Telegram</label>
+                                <label class="checkbox-item"><input type="checkbox" name="platform_chat" value="Email">
+                                    Email</label>
+                                <label class="checkbox-item" style="opacity:0.6; cursor:not-allowed;"><input
+                                        type="checkbox" name="platform_chat" value="Shopee" disabled> Shopee (Coming
+                                    Soon)</label>
+                                <label class="checkbox-item" style="opacity:0.6; cursor:not-allowed;"><input
+                                        type="checkbox" name="platform_chat" value="Instagram" disabled> Instagram
+                                    (Coming Soon)</label>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Jam Operasional Bisnis <span class="required">*</span></label>
+                            <div class="time-range-wrapper">
+                                <div class="time-input-container">
+                                    <label for="jam_buka" class="time-label-small">Buka</label>
+                                    <input type="time" id="jam_buka" name="jam_buka" required>
+                                </div>
+                                <span class="time-separator">-</span>
+                                <div class="time-input-container">
+                                    <label for="jam_tutup" class="time-label-small">Tutup</label>
+                                    <input type="time" id="jam_tutup" name="jam_tutup" required>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -431,6 +487,30 @@
                                     <option value="> 2 jam">&gt; 2 jam</option>
                                 </select>
                             </div>
+                        </div>
+
+                        <!-- NEW ADMIN DETAILS -->
+                        <div class="form-group">
+                            <label style="color:var(--primary-color);">Detail Tim Admin:</label>
+                            <div class="input-row" style="margin-bottom:0;">
+                                <div class="input-group-calc half">
+                                    <label for="admin_jam_kerja" class="sub-label">Jam Kerja Admin / Bln</label>
+                                    <div class="input-with-icon">
+                                        <i class="ph ph-clock"></i>
+                                        <input type="number" id="admin_jam_kerja" name="admin_jam_kerja" required
+                                            placeholder="Cth: 160">
+                                    </div>
+                                </div>
+                                <div class="input-group-calc half">
+                                    <label for="admin_gaji_jam" class="sub-label">Gaji Admin / Jam</label>
+                                    <div class="input-with-icon">
+                                        <i class="ph ph-currency-dollar"></i>
+                                        <input type="number" id="admin_gaji_jam" name="admin_gaji_jam" required
+                                            placeholder="Cth: 15000">
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="hint">Kami akan menghitung estimasi penghematan gaji bulanan Anda.</small>
                         </div>
                     </div>
 
@@ -536,14 +616,78 @@
         </div>
     </footer>
 
-    <!-- FLOAT WA BUTTON -->
-    <a href="https://wa.me/6285135735734?text=Halo%20kk%2C%20saya%20mau%20tanya%20tanya%20tentang%20automasi%20untuk%20UMKM"
-        class="float-wa" target="_blank">
-        <i class="ph-fill ph-whatsapp-logo"></i>
-    </a>
+    <!-- EMAIL POPUP MODAL -->
+    <div class="modal-overlay" id="emailModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            <div class="modal-icon-container">
+                <i class="ph-fill ph-envelope-simple-open modal-icon"></i>
+            </div>
+            <h3>Satu Langkah Lagi!</h3>
+            <p>Masukkan <strong>email aktif</strong> Anda agar kami dapat mengirimkan hasil perhitungan & strategi
+                otomatisasi khusus bisnis Anda.</p>
+
+            <form id="emailPopupForm">
+                <div class="form-group">
+                    <input type="email" id="finalEmail" name="finalEmail" placeholder="nama@email.com" required
+                        style="text-align:center;">
+                </div>
+                <button type="submit" class="cta-button primary full-width" id="finalSubmitBtn">
+                    <i class="ph-fill ph-paper-plane-right"></i> Kirim Data Sekarang
+                </button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
     <script src="background.js"></script>
+
+    <!-- Custom Chat Widget -->
+    <div class="chat-fab-container">
+        <button class="chat-fab" id="chatFab">
+            <i class="ph-fill ph-chat-circle-text"></i>
+        </button>
+    </div>
+
+    <div class="chat-window" id="chatWindow">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">
+                    <i class="ph-fill ph-robot"></i>
+                    <div class="chat-status-dot"></div>
+                </div>
+                <div class="chat-meta">
+                    <h3>AI Assistant</h3>
+                    <p>Online 24/7</p>
+                </div>
+            </div>
+            <button class="chat-close-btn" id="chatCloseBtn">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+
+        <!-- Body -->
+        <div class="chat-body" id="chatBody">
+            <!-- Messages will be injected here -->
+            <div class="message bot">
+                <div class="bubble">
+                    Halo! 👋 Saya AI Assistant JasaOtomasi.<br>Ada yang bisa saya bantu terkait kebutuhan otomatisasi
+                    bisnis Anda?
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="chat-footer">
+            <div class="chat-input-wrapper">
+                <textarea id="chatInput" class="chat-input" placeholder="Tulis pesan..." rows="1"></textarea>
+            </div>
+            <button id="sendBtn" class="send-btn">
+                <i class="ph-fill ph-paper-plane-right"></i>
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>
