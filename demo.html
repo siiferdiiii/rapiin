@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Otomatisasi - JasaOtomasi</title>
+    <meta name="description" content="Lihat demo dari sistem otomatisasi WhatsApp, Email, dan Chatbot AI">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- PHOSPHOR ICONS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Demo Page Specific Styles */
+        .demo-page {
+            min-height: 100vh;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .demo-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+
+        .demo-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .demo-header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .demo-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .demo-section h2 i {
+            font-size: 2rem;
+        }
+
+        /* Video Container untuk YouTube Embeds */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .demo-header h1 {
+                font-size: 2rem;
+            }
+
+            .demo-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Jasa<span class="text-primary">Otomasi</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#masalah" class="nav-link">Masalah</a></li>
+                <li><a href="index.html#solusi" class="nav-link">Solusi</a></li>
+                <li><a href="index.html#dampak" class="nav-link">Dampak</a></li>
+                <li><a href="index.html#kalkulator" class="nav-link">Hitung Hemat</a></li>
+                <li><a href="index.html#project" class="nav-link">Project</a></li>
+                <li><a href="#" class="nav-link active">Demo</a></li>
+                <li><a href="index.html#audit-form" class="cta-button small-btn">Konsultasi Gratis</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="demo-page">
+        <div class="demo-container">
+            <!-- Header -->
+            <div class="demo-header">
+                <h1>🎬 Demo Sistem Otomatisasi</h1>
+                <p>Lihat bagaimana sistem kami bekerja untuk bisnis Anda</p>
+            </div>
+
+            <!-- Demo 1: WhatsApp AI -->
+            <div class="demo-section">
+                <h2>
+                    <i class="ph-fill ph-whatsapp-logo"></i>
+                    Demo SC AI WhatsApp
+                </h2>
+                <p>Sistem chatbot AI untuk WhatsApp yang dapat menjawab pertanyaan customer secara otomatis 24/7.</p>
+
+                <!-- TODO: Ganti VIDEO_ID_1 dengan ID video YouTube Anda -->
+                <!-- Cara mendapatkan Video ID: dari URL https://www.youtube.com/watch?v=VIDEO_ID_1 -->
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Demo SC AI WhatsApp"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Demo 2: Auto Email Response -->
+            <div class="demo-section">
+                <h2>
+                    <i class="ph-fill ph-envelope"></i>
+                    Demo Auto Respon/Kirim Email
+                </h2>
+                <p>Sistem otomatis untuk mengirim laporan harian dan follow-up email ke customer.</p>
+
+                <!-- TODO: Ganti VIDEO_ID_2 dengan ID video YouTube Anda -->
+                <!-- Cara mendapatkan Video ID: dari URL https://www.youtube.com/watch?v=VIDEO_ID_2 -->
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Demo Auto Respon/Kirim Email"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
